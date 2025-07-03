@@ -360,7 +360,7 @@ This tool is for educational and personal use only. Users are responsible for co
 ---
 
 <div align="center">
-  <p>Made with ❤️ by the TikTok Downloader Team</p>
+  <p>Made with ❤️ by Saurabh Yadav</p>
   <p>
     <a href="#tiktok-downloader">Back to Top</a> •
     <a href="/about">About</a> •
