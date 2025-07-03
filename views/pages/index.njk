@@ -1,27 +1,3 @@
-{# {% extends "layouts/base.njk" %}
-{% block content %}
-
-<div class="text-center animate-fadeIn">
-  <h1 class="text-5xl font-bold">Download <span class="text-indigo-500">TikTok</span> Videos</h1>
-  <p class="text-gray-400 mt-4">No watermark, fast, HD quality, free forever.</p>
-
-  {% if error %}
-    <p class="text-red-500 mt-4">{{ error }}</p>
-  {% endif %}
-
-  <form action="/download" method="POST" class="mt-8 flex justify-center">
-    <input name="url" placeholder="Paste TikTok URL here"
-      class="w-2/3 px-4 py-2 rounded-l border border-gray-600 bg-gray-800 text-white">
-    <button type="submit"
-      class="bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-2 rounded-r text-white hover:scale-105 transition">
-      Download
-    </button>
-  </form>
-</div>
-
-{% endblock %}
- #}
-
 {% extends "layouts/base.njk" %}
 
 {% block title %}TikTok Downloader - Download Videos Without Watermark{% endblock %}

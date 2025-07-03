@@ -37,6 +37,11 @@ app.get('/contact', (req, res) => {
   res.render('pages/contact.njk');
 }); 
 
+// about developer Page
+app.get('/aboutdeveloper', (req, res) => {
+  res.render('pages/aboutdeveloper.njk');
+});
+
 // Download Handler
 app.post('/download', async (req, res) => {
   const { url } = req.body;

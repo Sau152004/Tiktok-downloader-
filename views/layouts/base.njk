@@ -1,320 +1,331 @@
-{# <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TikTok Downloader</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body class="bg-gray-900 text-white">
-
-  <header class="flex justify-between p-4 border-b border-gray-700">
-    <div class="text-2xl font-bold text-indigo-500">TikTok Downloader</div>
-    <nav class="space-x-6">
-      <a href="/" class="hover:text-indigo-400">Home</a>
-      <a href="/about" class="hover:text-indigo-400">About</a>
-    </nav>
-  </header>
-
-  <main class="container mx-auto p-4">
-    {% block content %}{% endblock %}
-  </main>
-
-  <footer class="text-center p-4 border-t border-gray-700 text-gray-400">
-    © 2025 TikTok Downloader
-  </footer>
-
-</body>
-</html> #}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}TikTok Downloader{% endblock %}</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              200: '#bfdbfe',
-              300: '#93c5fd',
-              400: '#60a5fa',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title %}TikTok Downloader{% endblock %}
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a'
+              },
+              dark: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
+                500: '#64748b',
+                600: '#475569',
+                700: '#334155',
+                800: '#1e293b',
+                900: '#0f172a'
+              }
             },
-            dark: {
-              50: '#f8fafc',
-              100: '#f1f5f9',
-              200: '#e2e8f0',
-              300: '#cbd5e1',
-              400: '#94a3b8',
-              500: '#64748b',
-              600: '#475569',
-              700: '#334155',
-              800: '#1e293b',
-              900: '#0f172a',
+            fontFamily: {
+              'display': ['Inter', 'system-ui', 'sans-serif']
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-up': 'slideUp 0.6s ease-out',
+              'bounce-gentle': 'bounceGentle 2s infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate'
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': {
+                  opacity: '0'
+                },
+                '100%': {
+                  opacity: '1'
+                }
+              },
+              slideUp: {
+                '0%': {
+                  transform: 'translateY(20px)',
+                  opacity: '0'
+                },
+                '100%': {
+                  transform: 'translateY(0)',
+                  opacity: '1'
+                }
+              },
+              bounceGentle: {
+                '0%, 100%': {
+                  transform: 'translateY(-5px)'
+                },
+                '50%': {
+                  transform: 'translateY(0px)'
+                }
+              },
+              glow: {
+                '0%': {
+                  boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)'
+                },
+                '100%': {
+                  boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)'
+                }
+              }
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'mesh-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
             }
-          },
-          fontFamily: {
-            'display': ['Inter', 'system-ui', 'sans-serif'],
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.5s ease-in-out',
-            'slide-up': 'slideUp 0.6s ease-out',
-            'bounce-gentle': 'bounceGentle 2s infinite',
-            'glow': 'glow 2s ease-in-out infinite alternate',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0' },
-              '100%': { opacity: '1' }
-            },
-            slideUp: {
-              '0%': { transform: 'translateY(20px)', opacity: '0' },
-              '100%': { transform: 'translateY(0)', opacity: '1' }
-            },
-            bounceGentle: {
-              '0%, 100%': { transform: 'translateY(-5px)' },
-              '50%': { transform: 'translateY(0px)' }
-            },
-            glow: {
-              '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-              '100%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' }
-            }
-          },
-          backgroundImage: {
-            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            'mesh-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           }
         }
       }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .glass-effect {
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-  </style>
-</head>
-<body class="bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900 text-white min-h-screen font-display overflow-x-hidden">
-  
-  <!-- Animated Background Elements -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-bounce-gentle"></div>
-  </div>
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+      .glass-effect {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900 text-white min-h-screen font-display overflow-x-hidden">
 
-  <!-- Header -->
-  <header class="relative z-50 glass-effect border-b border-white/10 backdrop-blur-md">
-    <nav class="container mx-auto px-4 py-4 lg:px-8">
-      <div class="flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3 animate-fade-in">
-          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-glow">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43V7.93a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.04.64z"/>
-            </svg>
-          </div>
-          <h1 class="text-2xl lg:text-3xl font-bold gradient-text">
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-bounce-gentle"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-50 glass-effect border-b border-white/10 backdrop-blur-md">
+      <nav class="container mx-auto px-4 py-4 lg:px-8">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+
+          <a href="/" class="flex items-center space-x-3 animate-fade-in group">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-glow group-hover:scale-105 transition-transform duration-200">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43V7.93a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.04.64z"/>
+              </svg>
+            </div>
+            <h1 class="text-2xl lg:text-3xl font-bold gradient-text group-hover:underline">
             TikTok Downloader
           </h1>
-        </div>
+          </a>
 
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="/" class="relative text-gray-300 hover:text-white transition-all duration-300 font-medium group">
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="relative text-gray-300 hover:text-white transition-all duration-300 font-medium group">
             Home
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/about" class="relative text-gray-300 hover:text-white transition-all duration-300 font-medium group">
+            </a>
+            <a href="/about" class="relative text-gray-300 hover:text-white transition-all duration-300 font-medium group">
             About
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden p-2 rounded-lg glass-effect transition-all duration-300 hover:bg-white/10" onclick="toggleMobileMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden p-2 rounded-lg glass-effect transition-all duration-300 hover:bg-white/10" onclick="toggleMobileMenu()">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div id="mobileMenu" class="md:hidden mt-4 hidden">
-        <div class="glass-effect rounded-2xl p-4 space-y-3 animate-slide-up">
-          <a href="/" class="block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 font-medium">
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden mt-4 hidden">
+          <div class="glass-effect rounded-2xl p-4 space-y-3 animate-slide-up">
+            <a href="/" class="block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 font-medium">
             Home
           </a>
-          <a href="/about" class="block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 font-medium">
+            <a href="/about" class="block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 font-medium">
             About
           </a>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <!-- Main Content -->
-  <main class="relative z-10 container mx-auto px-4 py-8 lg:px-8 lg:py-12 min-h-screen">
-    <div class="animate-slide-up">
-      {% block content %}
-      <!-- Default content if no block is provided -->
-      <div class="max-w-4xl mx-auto text-center space-y-8">
-        <div class="space-y-4">
-          <h2 class="text-4xl lg:text-6xl font-bold gradient-text leading-tight">
+    <!-- Main Content -->
+    <main class="relative z-10 container mx-auto px-4 py-8 lg:px-8 lg:py-12 min-h-screen">
+      <div class="animate-slide-up">
+        {% block content %}
+          <!-- Default content if no block is provided -->
+          <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-4xl lg:text-6xl font-bold gradient-text leading-tight">
             Download TikTok Videos
           </h2>
-          <p class="text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p class="text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Fast, free, and easy way to download your favorite TikTok videos in high quality
           </p>
-        </div>
-        
-        <div class="glass-effect rounded-3xl p-8 lg:p-12 max-w-2xl mx-auto shadow-2xl">
-          <div class="space-y-6">
-            <div class="relative">
-              <input 
+            </div>
+
+            <div class="glass-effect rounded-3xl p-8 lg:p-12 max-w-2xl mx-auto shadow-2xl">
+              <div class="space-y-6">
+                <div class="relative">
+                  <input 
                 type="url" 
                 placeholder="Paste TikTok URL here..." 
                 class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-lg"
               >
-              <div class="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-                </svg>
-              </div>
-            </div>
-            
-            <button class="w-full bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg">
+                  <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <button class="w-full bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg">
               Download Video
             </button>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-16">
-          <div class="glass-effect rounded-2xl p-6 lg:p-8 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
-            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white">Lightning Fast</h3>
-            <p class="text-gray-400">Download videos in seconds with our optimized servers</p>
-          </div>
 
-          <div class="glass-effect rounded-2xl p-6 lg:p-8 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
-            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white">100% Safe</h3>
-            <p class="text-gray-400">No malware, no ads, completely secure downloads</p>
-          </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-16">
+              <div class="glass-effect rounded-2xl p-6 lg:p-8 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white">Lightning Fast</h3>
+                <p class="text-gray-400">Download videos in seconds with our optimized servers</p>
+              </div>
 
-          <div class="glass-effect rounded-2xl p-6 lg:p-8 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
-            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-              </svg>
+              <div class="glass-effect rounded-2xl p-6 lg:p-8 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white">100% Safe</h3>
+                <p class="text-gray-400">No malware, no ads, completely secure downloads</p>
+              </div>
+
+              <div class="glass-effect rounded-2xl p-6 lg:p-8 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white">Always Free</h3>
+                <p class="text-gray-400">No hidden fees, no subscriptions, completely free</p>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white">Always Free</h3>
-            <p class="text-gray-400">No hidden fees, no subscriptions, completely free</p>
           </div>
-        </div>
+        {% endblock %}
       </div>
-      {% endblock %}
-    </div>
-  </main>
+    </main>
 
-  <!-- Footer -->
-  <footer class="relative z-10 glass-effect border-t border-white/10 mt-auto">
-    <div class="container mx-auto px-4 py-8 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-        <div class="text-gray-400 text-center md:text-left">
-          © 2025 TikTok Downloader. All rights reserved.
+    <!-- Footer -->
+    <footer class="relative z-10 glass-effect border-t border-white/10 mt-auto">
+      <div class="container mx-auto px-4 py-8 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <div class="text-gray-400 text-center md:text-left">
+          © 2025 TikTok Downloader. All rights reserved. 
         </div>
-        <div class="flex items-center space-x-6">
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <div class="text-gray-300 text-center md:text-left">
+             Made with ❤️ by 
+            <a href="/aboutdeveloper" class="text-blue-400 hover:underline">Saurabh Yadav</a>
+          </div>
+          <div class="flex items-center space-x-6">
+            <a href="/privacy" class="text-gray-400 hover:text-white transition-colors duration-300">
             Privacy Policy
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <a href="/terms" class="text-gray-400 hover:text-white transition-colors duration-300">
             Terms of Service
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+            <a href="/contact" class="text-gray-400 hover:text-white transition-colors duration-300">
             Contact
           </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const menu = document.getElementById('mobileMenu');
-      const button = event.target.closest('button');
-      
-      if (!menu.contains(event.target) && !button) {
-        menu.classList.add('hidden');
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu
+          .classList
+          .toggle('hidden');
       }
-    });
 
-    // Add smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function (event) {
+        const menu = document.getElementById('mobileMenu');
+        const button = event
+          .target
+          .closest('button');
 
-    // Add entrance animations on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-slide-up');
+        if (!menu.contains(event.target) && !button) {
+          menu
+            .classList
+            .add('hidden');
         }
       });
-    }, observerOptions);
 
-    document.querySelectorAll('.glass-effect').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
+      // Add smooth scrolling
+      document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document
+              .querySelector(this.getAttribute('href'))
+              .scrollIntoView({behavior: 'smooth'});
+          });
+        });
 
-</body>
+      // Add entrance animations on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry
+              .target
+              .classList
+              .add('animate-slide-up');
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll('.glass-effect')
+        .forEach(el => {
+          observer.observe(el);
+        });
+    </script>
+
+  </body>
 </html>
