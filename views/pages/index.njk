@@ -1,0 +1,333 @@
+{# {% extends "layouts/base.njk" %}
+{% block content %}
+
+<div class="text-center animate-fadeIn">
+  <h1 class="text-5xl font-bold">Download <span class="text-indigo-500">TikTok</span> Videos</h1>
+  <p class="text-gray-400 mt-4">No watermark, fast, HD quality, free forever.</p>
+
+  {% if error %}
+    <p class="text-red-500 mt-4">{{ error }}</p>
+  {% endif %}
+
+  <form action="/download" method="POST" class="mt-8 flex justify-center">
+    <input name="url" placeholder="Paste TikTok URL here"
+      class="w-2/3 px-4 py-2 rounded-l border border-gray-600 bg-gray-800 text-white">
+    <button type="submit"
+      class="bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-2 rounded-r text-white hover:scale-105 transition">
+      Download
+    </button>
+  </form>
+</div>
+
+{% endblock %}
+ #}
+
+{% extends "layouts/base.njk" %}
+
+{% block title %}TikTok Downloader - Download Videos Without Watermark{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto space-y-16 animate-fade-in">
+  
+  <!-- Hero Section -->
+  <div class="text-center space-y-8">
+    <div class="space-y-6">
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+        Download 
+        <span class="gradient-text inline-block animate-bounce-gentle">TikTok</span> 
+        Videos
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        No watermark, lightning fast, HD quality, and 
+        <span class="text-green-400 font-semibold">free forever</span>.
+      </p>
+    </div>
+
+    <!-- Error Message -->
+    {% if error %}
+    <div class="max-w-2xl mx-auto animate-slide-up">
+      <div class="glass-effect bg-red-500/10 border-red-500/30 rounded-2xl p-4 lg:p-6">
+        <div class="flex items-center space-x-3">
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <p class="text-red-300 font-medium">{{ error }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Download Form -->
+    <div class="max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.2s;">
+      <div class="glass-effect rounded-3xl p-6 lg:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500">
+        <form action="/download" method="POST" class="space-y-6">
+          <div class="relative group">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div class="relative flex flex-col sm:flex-row gap-3 sm:gap-0">
+              <div class="relative flex-1">
+                <input 
+                  name="url" 
+                  type="url"
+                  placeholder="Paste your TikTok URL here..." 
+                  required
+                  class="w-full px-6 py-4 lg:py-5 bg-white/10 border border-white/20 rounded-2xl sm:rounded-r-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-base lg:text-lg"
+                  autocomplete="off"
+                >
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-400 group-focus-within:text-primary-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                  </svg>
+                </div>
+              </div>
+              
+              <button 
+                type="submit"
+                class="group/btn relative overflow-hidden bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 px-8 py-4 lg:py-5 rounded-2xl sm:rounded-l-none text-white font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-base lg:text-lg min-w-[140px] sm:min-w-[160px]"
+              >
+                <span class="relative z-10 flex items-center justify-center space-x-2">
+                  <svg class="w-5 h-5 group-hover/btn:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                  <span>Download</span>
+                </span>
+                
+                <!-- Button hover effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-white/20 transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Additional Options -->
+          <div class="flex flex-wrap justify-center gap-3 text-sm text-gray-400">
+            <div class="flex items-center space-x-2">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>No Watermark</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span>High Speed</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              <span>100% Safe</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works Section -->
+  <div class="text-center space-y-12 animate-slide-up" style="animation-delay: 0.4s;">
+    <div class="space-y-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">How It Works</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Download your favorite TikTok videos in just 3 simple steps
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Step 1 -->
+      <div class="glass-effect rounded-2xl p-6 lg:p-8 space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+        <div class="relative">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-bounce-gentle">
+            <span class="text-2xl font-bold text-white">1</span>
+          </div>
+          <div class="absolute -top-2 -right-2 w-6 h-6 bg-primary-500 rounded-full animate-ping"></div>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-white">Copy URL</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Copy the TikTok video URL from your browser or mobile app
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="glass-effect rounded-2xl p-6 lg:p-8 space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+        <div class="relative">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-bounce-gentle">
+            <span class="text-2xl font-bold text-white">2</span>
+          </div>
+          <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-white">Paste & Download</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Paste the URL in the input field above and click Download
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="glass-effect rounded-2xl p-6 lg:p-8 space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+        <div class="relative">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-bounce-gentle">
+            <span class="text-2xl font-bold text-white">3</span>
+          </div>
+          <div class="absolute -top-2 -right-2 w-6 h-6 bg-purple-500 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-white">Save Video</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Your video will be processed and ready to save to your device
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up" style="animation-delay: 0.6s;">
+    <!-- Feature 1 -->
+    <div class="glass-effect rounded-2xl p-6 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-pulse">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold text-white">HD Quality</h3>
+      <p class="text-gray-400 text-sm">Download videos in original HD quality</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="glass-effect rounded-2xl p-6 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-pulse">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold text-white">Completely Free</h3>
+      <p class="text-gray-400 text-sm">No hidden costs or premium subscriptions</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="glass-effect rounded-2xl p-6 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-pulse">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold text-white">No Watermark</h3>
+      <p class="text-gray-400 text-sm">Clean videos without TikTok watermarks</p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div class="glass-effect rounded-2xl p-6 text-center space-y-4 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-pulse">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold text-white">All Devices</h3>
+      <p class="text-gray-400 text-sm">Works on mobile, tablet, and desktop</p>
+    </div>
+  </div>
+
+  <!-- FAQ Preview -->
+  <div class="text-center space-y-8 animate-slide-up" style="animation-delay: 0.8s;">
+    <div class="space-y-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Frequently Asked Questions</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Common questions about our TikTok video downloader
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4">
+      <!-- FAQ Item 1 -->
+      <div class="glass-effect rounded-2xl p-6 text-left hover:bg-white/10 transition-all duration-300">
+        <h3 class="text-lg font-bold text-white mb-3">Is it legal to download TikTok videos?</h3>
+        <p class="text-gray-400 leading-relaxed">
+          Yes, you can download TikTok videos for personal use. However, please respect copyright laws and don't redistribute content without permission from the original creator.
+        </p>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="glass-effect rounded-2xl p-6 text-left hover:bg-white/10 transition-all duration-300">
+        <h3 class="text-lg font-bold text-white mb-3">Do I need to install any software?</h3>
+        <p class="text-gray-400 leading-relaxed">
+          No installation required! Our TikTok downloader works entirely in your web browser. Just paste the URL and download instantly.
+        </p>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="glass-effect rounded-2xl p-6 text-left hover:bg-white/10 transition-all duration-300">
+        <h3 class="text-lg font-bold text-white mb-3">What video quality can I download?</h3>
+        <p class="text-gray-400 leading-relaxed">
+          We provide the highest quality available from the original TikTok video, typically in HD resolution without any quality loss.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(-8px); }
+  50% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 3s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom focus styles */
+input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Button loading state */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .animate-bounce-gentle {
+    animation-duration: 2s;
+  }
+}
+</style>
+{% endblock %}

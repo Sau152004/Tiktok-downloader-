@@ -1,0 +1,91 @@
+/* Button base styles */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-transparent;
+  @apply text-base font-medium rounded-xl shadow-sm;
+  @apply focus:outline-none focus:ring-4 focus:ring-offset-2;
+  @apply transition-all duration-200 ease-in-out;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply relative overflow-hidden;
+}
+
+/* Button sizes */
+.btn-sm {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn-lg {
+  @apply px-8 py-4 text-lg;
+}
+
+.btn-xl {
+  @apply px-10 py-5 text-xl;
+}
+
+/* Primary button */
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700;
+  @apply text-white shadow-lg;
+  @apply hover:from-primary-700 hover:to-primary-800;
+  @apply hover:shadow-xl hover:-translate-y-0.5;
+  @apply focus:ring-primary-500/50;
+  @apply active:transform-none active:shadow-lg;
+}
+
+/* Secondary button */
+.btn-secondary {
+  @apply bg-gradient-to-r from-secondary-600 to-secondary-700;
+  @apply text-white shadow-lg;
+  @apply hover:from-secondary-700 hover:to-secondary-800;
+  @apply hover:shadow-xl hover:-translate-y-0.5;
+  @apply focus:ring-secondary-500/50;
+  @apply active:transform-none active:shadow-lg;
+}
+
+/* Success button */
+.btn-success {
+  @apply bg-gradient-to-r from-success-600 to-success-700;
+  @apply text-white shadow-lg;
+  @apply hover:from-success-700 hover:to-success-800;
+  @apply hover:shadow-xl hover:-translate-y-0.5;
+  @apply focus:ring-success-500/50;
+  @apply active:transform-none active:shadow-lg;
+}
+
+/* Warning button */
+.btn-warning {
+  @apply bg-gradient-to-r from-warning-500 to-warning-600;
+  @apply text-white shadow-lg;
+  @apply hover:from-warning-600 hover:to-warning-700;
+  @apply hover:shadow-xl hover:-translate-y-0.5;
+  @apply focus:ring-warning-500/50;
+  @apply active:transform-none active:shadow-lg;
+}
+
+/* Error/Danger button */
+.btn-error {
+  @apply bg-gradient-to-r from-error-600 to-error-700;
+  @apply text-white shadow-lg;
+  @apply hover:from-error-700 hover:to-error-800;
+  @apply hover:shadow-xl hover:-translate-y-0.5;
+  @apply focus:ring-error-500/50;
+  @apply active:transform-none active:shadow-lg;
+}
+/* Outline button */
+.btn-outline {  
+    @apply border-2 border-gray-300 dark:border-gray-600;
+    @apply text-gray-900 dark:text-white bg-transparent;
+    @apply hover:bg-gray-100 dark:hover:bg-gray-700;
+    @apply focus:ring-gray-500/50;
+    }
+/* Outline primary button */
+.btn-outline-primary {
+  @apply border-2 border-primary-500 text-primary-500;
+  @apply hover:bg-primary-100 dark:hover:bg-primary-900/30;
+  @apply focus:ring-primary-500/50;
+}
+/* Outline secondary button */
+.btn-outline-secondary {
+  @apply border-2 border-secondary-500 text-secondary-500;
+  @apply hover:bg-secondary-100 dark:hover:bg-secondary-900/30;
+  @apply focus:ring-secondary-500/50;
+}
