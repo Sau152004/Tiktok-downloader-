@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Tiktok-downloader-
-=======
-=======
->>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
+
 # Tiktok-downloader-
 # 🎵 TikTok Downloader
 
