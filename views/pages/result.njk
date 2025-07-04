@@ -1,8 +1,36 @@
+<<<<<<< HEAD
+=======
+{# {% extends "layouts/base.njk" %}
+{% block content %}
+
+<div class="text-center animate-fadeIn">
+  <h2 class="text-3xl font-bold mb-6">Video Preview</h2>
+  <video src="{{ video.play }}" controls class="mx-auto mb-6 rounded-lg shadow-lg"></video>
+
+  <div class="space-y-4">
+    <a href="{{ video.play }}" download
+      class="block bg-indigo-600 px-6 py-2 rounded hover:bg-indigo-700 transition">
+      Download (No Watermark)
+    </a>
+
+    <a href="{{ video.wmplay }}" download
+      class="block bg-purple-600 px-6 py-2 rounded hover:bg-purple-700 transition">
+      Download (With Watermark)
+    </a>
+
+    <a href="/" class="block text-indigo-400 hover:underline mt-4">Download Another</a>
+  </div>
+</div>
+
+{% endblock %} #}
+
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
 {% extends "layouts/base.njk" %}
 
 {% block title %}Video Preview - TikTok Downloader{% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
   <div class="max-w-4xl mx-auto space-y-12 animate-fade-in">
 
     <!-- Success Header -->
@@ -35,6 +63,40 @@
             <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div class="relative bg-black/50 rounded-2xl overflow-hidden shadow-2xl">
               <video 
+=======
+<div class="max-w-4xl mx-auto space-y-12 animate-fade-in">
+  
+  <!-- Success Header -->
+  <div class="text-center space-y-6">
+    <div class="flex justify-center">
+      <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg animate-bounce-gentle">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text">
+        Video Ready!
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+        Your TikTok video has been processed successfully. Preview and download below.
+      </p>
+    </div>
+  </div>
+
+  <!-- Video Preview Section -->
+  <div class="animate-slide-up" style="animation-delay: 0.2s;">
+    <div class="glass-effect rounded-3xl p-6 lg:p-12 shadow-2xl">
+      <div class="space-y-8">
+        
+        <!-- Video Container -->
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative bg-black/50 rounded-2xl overflow-hidden shadow-2xl">
+            <video 
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
               src="{{ video.play }}" 
               controls 
               preload="metadata"
@@ -44,6 +106,7 @@
             >
               Your browser does not support the video tag.
             </video>
+<<<<<<< HEAD
             </div>
           </div>
 
@@ -233,11 +296,43 @@
           <p class="text-gray-400 text-sm leading-relaxed">
           For the best experience, choose the "Clean Version" without watermark. It's perfect for creating content, sharing with friends, or saving your favorite videos without any distractions.
         </p>
+=======
+          </div>
+        </div>
+
+        <!-- Video Info -->
+        <div class="glass-effect rounded-2xl p-6 space-y-4 bg-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="space-y-2">
+              <div class="flex items-center space-x-2 text-sm text-gray-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Processing completed successfully</span>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+              <div class="flex items-center space-x-1 text-green-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>HD Quality</span>
+              </div>
+              <div class="flex items-center space-x-1 text-blue-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <span>Fast Download</span>
+              </div>
+            </div>
+          </div>
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
         </div>
       </div>
     </div>
   </div>
 
+<<<<<<< HEAD
   <script>
     function shareVideo() {
       if (navigator.share) {
@@ -275,11 +370,206 @@
 
           // Add loading state
           button.innerHTML = `
+=======
+  <!-- Download Options -->
+  <div class="space-y-6 animate-slide-up" style="animation-delay: 0.4s;">
+    <div class="text-center space-y-3">
+      <h3 class="text-2xl md:text-3xl font-bold text-white">Choose Download Option</h3>
+      <p class="text-gray-400 max-w-xl mx-auto">
+        Select your preferred download format. We recommend the watermark-free version for the best quality.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      
+      <!-- No Watermark Download -->
+      <div class="glass-effect rounded-3xl p-8 space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden">
+        <!-- Recommended Badge -->
+        <div class="absolute top-4 right-4">
+          <span class="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+            RECOMMENDED
+          </span>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4">
+            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:animate-bounce-gentle">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h4 class="text-xl font-bold text-white">Clean Version</h4>
+              <p class="text-gray-400 text-sm">No watermark • Best quality</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>No TikTok watermark</span>
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Original HD quality</span>
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Perfect for sharing</span>
+            </div>
+          </div>
+        </div>
+        
+        <a href="{{ video.play }}" download
+          class="group/btn relative w-full overflow-hidden bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-700 hover:to-indigo-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 text-lg">
+          <svg class="w-6 h-6 group-hover/btn:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span>Download Clean</span>
+          
+          <!-- Button hover effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-white/20 transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left"></div>
+        </a>
+      </div>
+
+      <!-- With Watermark Download -->
+      <div class="glass-effect rounded-3xl p-8 space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden">
+        
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:animate-bounce-gentle">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1h4a1 1 0 011 1v18a1 1 0 01-1 1H3a1 1 0 01-1-1V2a1 1 0 011-1h4v3"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h4 class="text-xl font-bold text-white">Original Version</h4>
+              <p class="text-gray-400 text-sm">With watermark • Original format</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Includes TikTok watermark</span>
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Original quality maintained</span>
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Faster processing</span>
+            </div>
+          </div>
+        </div>
+        
+        <a href="{{ video.wmplay }}" download
+          class="group/btn relative w-full overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 text-lg">
+          <svg class="w-6 h-6 group-hover/btn:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span>Download Original</span>
+          
+          <!-- Button hover effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-white/20 transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Actions -->
+  <div class="text-center space-y-6 animate-slide-up" style="animation-delay: 0.6s;">
+    <div class="glass-effect rounded-2xl p-6 inline-block">
+      <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <a href="/" 
+          class="group flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-300 font-medium">
+          <svg class="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+          <span>Download Another Video</span>
+        </a>
+        
+        <div class="hidden sm:block w-px h-6 bg-gray-600"></div>
+        
+        <button onclick="shareVideo()" 
+          class="group flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-300 font-medium">
+          <svg class="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+          </svg>
+          <span>Share This Tool</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="max-w-2xl mx-auto">
+      <div class="glass-effect rounded-2xl p-6 space-y-4">
+        <div class="flex items-center space-x-3">
+          <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+          <h4 class="text-lg font-bold text-white">Pro Tip</h4>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          For the best experience, choose the "Clean Version" without watermark. It's perfect for creating content, sharing with friends, or saving your favorite videos without any distractions.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function shareVideo() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'TikTok Video Downloader',
+      text: 'Download TikTok videos without watermark - Fast, Free, HD Quality',
+      url: window.location.origin
+    });
+  } else {
+    // Fallback for browsers that don't support Web Share API
+    navigator.clipboard.writeText(window.location.origin).then(() => {
+      // Show a temporary notification
+      const notification = document.createElement('div');
+      notification.textContent = 'Link copied to clipboard!';
+      notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-slide-up';
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.remove();
+      }, 3000);
+    });
+  }
+}
+
+// Add download progress tracking
+document.querySelectorAll('a[download]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const button = e.target.closest('a');
+    const originalText = button.innerHTML;
+    
+    // Add loading state
+    button.innerHTML = `
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
       <svg class="w-6 h-6 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
       </svg>
       <span>Preparing Download...</span>
     `;
+<<<<<<< HEAD
           button.style.pointerEvents = 'none';
 
           // Reset after 3 seconds
@@ -395,4 +685,100 @@
       pointer-events: none;
     }
   </style>
+=======
+    button.style.pointerEvents = 'none';
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      button.innerHTML = originalText;
+      button.style.pointerEvents = 'auto';
+    }, 3000);
+  });
+});
+
+// Video loading enhancement
+document.querySelector('video').addEventListener('loadstart', function() {
+  console.log('Video loading started');
+});
+
+document.querySelector('video').addEventListener('canplay', function() {
+  console.log('Video ready to play');
+});
+</script>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(-8px); }
+  50% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 3s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Video container enhancements */
+video {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+video:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
+}
+
+/* Button enhancements */
+a[download]:active {
+  transform: scale(0.98) !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  video {
+    max-height: 50vh;
+  }
+  
+  .animate-bounce-gentle {
+    animation-duration: 2s;
+  }
+}
+
+/* Loading state styles */
+.loading-state {
+  opacity: 0.7;
+  pointer-events: none;
+}
+</style>
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
 {% endblock %}

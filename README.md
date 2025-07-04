@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Tiktok-downloader-
 =======
+=======
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
 # Tiktok-downloader-
 # 🎵 TikTok Downloader
 
@@ -371,5 +374,9 @@ This tool is for educational and personal use only. Users are responsible for co
     <a href="/privacy-policy">Privacy</a> •
     <a href="/terms">Terms</a>
   </p>
+<<<<<<< HEAD
 </div>
 >>>>>>> 76d53551c2ffaaca82f2a6b7e48c65be3afd3a10
+=======
+</div>
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e

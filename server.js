@@ -37,11 +37,14 @@ app.get('/contact', (req, res) => {
   res.render('pages/contact.njk');
 }); 
 
+<<<<<<< HEAD
 // about developer Page
 app.get('/aboutdeveloper', (req, res) => {
   res.render('pages/aboutdeveloper.njk');
 });
 
+=======
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
 // Download Handler
 app.post('/download', async (req, res) => {
   const { url } = req.body;

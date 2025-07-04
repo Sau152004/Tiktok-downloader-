@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animation */
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+} */ 
+
+
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';

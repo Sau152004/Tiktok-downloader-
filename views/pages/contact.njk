@@ -3,6 +3,7 @@
 {% block title %}Contact Us - TikTok Downloader{% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
   <div class="max-w-6xl mx-auto space-y-16 animate-fade-in">
 
     <!-- Header -->
@@ -99,6 +100,104 @@
                 Full Name *
               </label>
                 <input 
+=======
+<div class="max-w-6xl mx-auto space-y-16 animate-fade-in">
+  
+  <!-- Header -->
+  <div class="text-center space-y-8">
+    <div class="space-y-6">
+      <div class="flex justify-center">
+        <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center shadow-lg animate-bounce-gentle">
+          <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+        </div>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+        <span class="gradient-text">Get in Touch</span>
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        Have questions, feedback, or need help? We're here for you 24/7. Choose the best way to reach us.
+      </p>
+    </div>
+  </div>
+
+  <!-- Quick Contact Options -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up" style="animation-delay: 0.2s;">
+    <!-- Email -->
+    <div class="glass-effect rounded-2xl p-8 text-center space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-bounce-gentle">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-xl font-bold text-white">Email Support</h3>
+        <p class="text-gray-400">Get detailed help via email</p>
+        <a href="mailto:support@tiktokdownloader.com" 
+          class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium py-2 px-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+          support@tiktokdownloader.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Live Chat -->
+    <div class="glass-effect rounded-2xl p-8 text-center space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-bounce-gentle">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-xl font-bold text-white">Live Chat</h3>
+        <p class="text-gray-400">Instant support when you need it</p>
+        <button onclick="openChat()" 
+          class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-medium py-2 px-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+          Start Chat Now
+        </button>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="glass-effect rounded-2xl p-8 text-center space-y-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 group">
+      <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:animate-bounce-gentle">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-xl font-bold text-white">FAQ</h3>
+        <p class="text-gray-400">Find quick answers</p>
+        <a href="#faq" 
+          class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-2 px-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+          Browse FAQ
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="animate-slide-up" style="animation-delay: 0.4s;">
+    <div class="glass-effect rounded-3xl p-8 lg:p-12">
+      <div class="max-w-3xl mx-auto space-y-8">
+        
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Send us a Message</h2>
+          <p class="text-gray-400 text-lg">
+            Fill out the form below and we'll get back to you within 24 hours
+          </p>
+        </div>
+
+        <form class="space-y-6" action="/contact" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Name -->
+            <div class="space-y-2">
+              <label for="name" class="block text-sm font-medium text-gray-300">
+                Full Name *
+              </label>
+              <input 
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
                 type="text" 
                 id="name" 
                 name="name" 
@@ -106,6 +205,7 @@
                 class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                 placeholder="Enter your full name"
               >
+<<<<<<< HEAD
               </div>
 
               <!-- Email -->
@@ -114,6 +214,16 @@
                 Email Address *
               </label>
                 <input 
+=======
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-2">
+              <label for="email" class="block text-sm font-medium text-gray-300">
+                Email Address *
+              </label>
+              <input 
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
                 type="email" 
                 id="email" 
                 name="email" 
@@ -121,6 +231,7 @@
                 class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                 placeholder="Enter your email"
               >
+<<<<<<< HEAD
               </div>
             </div>
 
@@ -130,11 +241,23 @@
               Subject *
             </label>
               <select 
+=======
+            </div>
+          </div>
+
+          <!-- Subject -->
+          <div class="space-y-2">
+            <label for="subject" class="block text-sm font-medium text-gray-300">
+              Subject *
+            </label>
+            <select 
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
               id="subject" 
               name="subject" 
               required
               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
             >
+<<<<<<< HEAD
                 <option value="" class="bg-gray-800">Select a topic</option>
                 <option value="technical-support" class="bg-gray-800">Technical Support</option>
                 <option value="bug-report" class="bg-gray-800">Bug Report</option>
@@ -152,6 +275,25 @@
               Message *
             </label>
               <textarea 
+=======
+              <option value="" class="bg-gray-800">Select a topic</option>
+              <option value="technical-support" class="bg-gray-800">Technical Support</option>
+              <option value="bug-report" class="bg-gray-800">Bug Report</option>
+              <option value="feature-request" class="bg-gray-800">Feature Request</option>
+              <option value="account-issue" class="bg-gray-800">Account Issue</option>
+              <option value="privacy-concern" class="bg-gray-800">Privacy Concern</option>
+              <option value="business-inquiry" class="bg-gray-800">Business Inquiry</option>
+              <option value="other" class="bg-gray-800">Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="space-y-2">
+            <label for="message" class="block text-sm font-medium text-gray-300">
+              Message *
+            </label>
+            <textarea 
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
               id="message" 
               name="message" 
               rows="6" 
@@ -159,6 +301,7 @@
               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-none"
               placeholder="Describe your question or issue in detail..."
             ></textarea>
+<<<<<<< HEAD
             </div>
 
             <!-- Priority -->
@@ -363,11 +506,212 @@
         const originalContent = submitBtn.innerHTML;
 
         submitBtn.innerHTML = `
+=======
+          </div>
+
+          <!-- Priority -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-300">
+              Priority Level
+            </label>
+            <div class="flex flex-wrap gap-3">
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="radio" name="priority" value="low" class="text-primary-500 focus:ring-primary-500" checked>
+                <span class="text-gray-300">Low</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="radio" name="priority" value="medium" class="text-primary-500 focus:ring-primary-500">
+                <span class="text-gray-300">Medium</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="radio" name="priority" value="high" class="text-primary-500 focus:ring-primary-500">
+                <span class="text-gray-300">High</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="radio" name="priority" value="urgent" class="text-primary-500 focus:ring-primary-500">
+                <span class="text-gray-300">Urgent</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button 
+              type="submit"
+              class="group bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 mx-auto"
+            >
+              <svg class="w-6 h-6 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+              <span>Send Message</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Response Time -->
+  <div class="text-center glass-effect rounded-2xl p-6 animate-slide-up" style="animation-delay: 0.6s;">
+    <div class="space-y-4">
+      <h3 class="text-xl font-bold text-white">Response Times</h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+        <div class="space-y-2">
+          <div class="w-3 h-3 bg-green-400 rounded-full mx-auto"></div>
+          <div class="text-green-400 font-semibold">Low Priority</div>
+          <div class="text-gray-400">48-72 hours</div>
+        </div>
+        <div class="space-y-2">
+          <div class="w-3 h-3 bg-yellow-400 rounded-full mx-auto"></div>
+          <div class="text-yellow-400 font-semibold">Medium Priority</div>
+          <div class="text-gray-400">24-48 hours</div>
+        </div>
+        <div class="space-y-2">
+          <div class="w-3 h-3 bg-orange-400 rounded-full mx-auto"></div>
+          <div class="text-orange-400 font-semibold">High Priority</div>
+          <div class="text-gray-400">12-24 hours</div>
+        </div>
+        <div class="space-y-2">
+          <div class="w-3 h-3 bg-red-400 rounded-full mx-auto"></div>
+          <div class="text-red-400 font-semibold">Urgent</div>
+          <div class="text-gray-400">2-6 hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div id="faq" class="space-y-12 animate-slide-up" style="animation-delay: 0.8s;">
+    <div class="text-center space-y-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Frequently Asked Questions</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Quick answers to common questions
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4">
+      <!-- FAQ Items -->
+      <div class="glass-effect rounded-2xl overflow-hidden">
+        <button onclick="toggleFAQ(1)" class="w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors duration-300">
+          <h3 class="text-lg font-bold text-white">How do I download a TikTok video?</h3>
+          <svg class="w-6 h-6 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="faq-1" class="hidden px-6 pb-6">
+          <p class="text-gray-300 leading-relaxed">
+            Simply copy the TikTok video URL from your browser or mobile app, paste it into our download form on the homepage, and click "Download". You'll be able to choose between the clean version (no watermark) or the original version with watermark.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-effect rounded-2xl overflow-hidden">
+        <button onclick="toggleFAQ(2)" class="w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors duration-300">
+          <h3 class="text-lg font-bold text-white">Is this service completely free?</h3>
+          <svg class="w-6 h-6 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="faq-2" class="hidden px-6 pb-6">
+          <p class="text-gray-300 leading-relaxed">
+            Yes, our TikTok downloader is completely free to use. There are no hidden fees, no premium subscriptions, and no download limits. We believe everyone should have free access to their favorite content.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-effect rounded-2xl overflow-hidden">
+        <button onclick="toggleFAQ(3)" class="w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors duration-300">
+          <h3 class="text-lg font-bold text-white">Do you store the videos I download?</h3>
+          <svg class="w-6 h-6 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="faq-3" class="hidden px-6 pb-6">
+          <p class="text-gray-300 leading-relaxed">
+            No, we do not permanently store any videos. All video files are temporarily cached on our servers for processing and are automatically deleted within 24 hours. Your privacy and storage security are our top priorities.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-effect rounded-2xl overflow-hidden">
+        <button onclick="toggleFAQ(4)" class="w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors duration-300">
+          <h3 class="text-lg font-bold text-white">What video quality do you provide?</h3>
+          <svg class="w-6 h-6 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="faq-4" class="hidden px-6 pb-6">
+          <p class="text-gray-300 leading-relaxed">
+            We provide the highest quality available from the original TikTok video, typically in HD resolution. Our service maintains the original video quality without any compression or degradation during the download process.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-effect rounded-2xl overflow-hidden">
+        <button onclick="toggleFAQ(5)" class="w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors duration-300">
+          <h3 class="text-lg font-bold text-white">Why is my download not working?</h3>
+          <svg class="w-6 h-6 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="faq-5" class="hidden px-6 pb-6">
+          <p class="text-gray-300 leading-relaxed">
+            Common issues include: invalid URL format, private/restricted videos, or temporary server overload. Make sure you're using a valid TikTok video URL and the video is publicly accessible. If problems persist, please contact our support team.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-effect rounded-2xl overflow-hidden">
+        <button onclick="toggleFAQ(6)" class="w-full flex justify-between items-center p-6 text-left hover:bg-white/5 transition-colors duration-300">
+          <h3 class="text-lg font-bold text-white">Is it legal to download TikTok videos?</h3>
+          <svg class="w-6 h-6 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="faq-6" class="hidden px-6 pb-6">
+          <p class="text-gray-300 leading-relaxed">
+            Downloading TikTok videos for personal use is generally legal. However, please respect copyright laws and don't redistribute content without permission from the original creator. Always give proper attribution when sharing downloaded content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleFAQ(id) {
+  const faq = document.getElementById(`faq-${id}`);
+  const button = faq.previousElementSibling;
+  const icon = button.querySelector('svg');
+  
+  if (faq.classList.contains('hidden')) {
+    faq.classList.remove('hidden');
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    faq.classList.add('hidden');
+    icon.style.transform = 'rotate(0deg)';
+  }
+}
+
+function openChat() {
+  // In a real implementation, this would open a chat widget
+  alert('Live chat feature coming soon! Please use our contact form or email support for now.');
+}
+
+// Form enhancement
+document.querySelector('form').addEventListener('submit', function(e) {
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const originalContent = submitBtn.innerHTML;
+  
+  submitBtn.innerHTML = `
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
     <svg class="w-6 h-6 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
     </svg>
     <span>Sending...</span>
   `;
+<<<<<<< HEAD
         submitBtn.disabled = true;
 
         // In a real implementation, you would handle the form submission here
@@ -451,4 +795,70 @@
       accent-color: #3b82f6;
     }
   </style>
+=======
+  submitBtn.disabled = true;
+  
+  // In a real implementation, you would handle the form submission here
+  // For demo purposes, we'll just reset after 2 seconds
+  setTimeout(() => {
+    submitBtn.innerHTML = originalContent;
+    submitBtn.disabled = false;
+  }, 2000);
+});
+</script>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(-8px); }
+  50% { transform: translateY(0px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 3s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Form styling enhancements */
+input:focus, select:focus, textarea:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Radio button styling */
+input[type="radio"] {
+  accent-color: #3b82f6;
+}
+</style>
+>>>>>>> 7ce157e5de7cac53160a1639a955156d1c1bc39e
 {% endblock %}
